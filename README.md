@@ -1,4 +1,4 @@
-# Cowsay (In Ruby)
+# Cowsay (In Crystal)
 
 	 ___________ 
 	< OMGHI2U!! >

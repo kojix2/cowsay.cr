@@ -1,2 +1,4 @@
-util/*
-*.gem
+bin/*
+*.lock
+lib/*
+.shards

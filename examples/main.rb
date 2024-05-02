@@ -1,4 +1,4 @@
-require 'ruby_cowsay'
+require '../src/cowsay'
 
 turtle = Cow.new({:cow => 'turtle'})
 
