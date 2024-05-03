@@ -1,4 +1,4 @@
 require "./cowsay/*"
 
-module CowSay
+module Cowsay
 end

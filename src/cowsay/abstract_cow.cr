@@ -1,6 +1,6 @@
 require "./abstract_cow"
 
-module CowSay
+module Cowsay
   class AbstractCow
     property eyes : String
     property tongue : String

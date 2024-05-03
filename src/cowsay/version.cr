@@ -1,5 +1,5 @@
 require "./abstract_cow"
 
-module CowSay
+module Cowsay
   VERSION = {{ `shards version #{__DIR__}`.chomp.stringify }}
 end

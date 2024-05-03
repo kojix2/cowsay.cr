@@ -1,6 +1,6 @@
 require "./abstract_cow"
 
-module CowSay
+module Cowsay
   class Elephant < AbstractCow
     def render_cow
       <<-COW

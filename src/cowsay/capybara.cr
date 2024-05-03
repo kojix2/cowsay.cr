@@ -1,6 +1,6 @@
 require "./abstract_cow"
 
-module CowSay
+module Cowsay
   class Capybara < AbstractCow
     def set_mouth!
       if @tongue.strip.empty?
