@@ -1,5 +1,3 @@
-require "./abstract_cow"
-
 module Cowsay
   class AbstractCow
     property eyes : String
