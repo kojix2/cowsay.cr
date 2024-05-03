@@ -1,13 +1,13 @@
-require '../src/cowsay'
+require "../src/cowsay"
 
-turtle = Cow.new({:cow => 'turtle'})
+turtle = Cow.new({:cow => "turtle"})
 
-puts turtle.say("Here's the available faces!")
+puts turtle.say("Here"s the available faces!")
 puts Cow.faces
 
-puts turtle.say("Here's all of the available cows!")
+puts turtle.say("Here"s all of the available cows!")
 puts Cow.cows
 
-c = Cow.new({:face_type => 'paranoid'})
-c.face_type = 'stoned'
-puts c.say 'whoa dude.'
+c = Cow.new({:face_type => "paranoid"})
+c.face_type = "stoned"
+puts c.say "whoa dude."
