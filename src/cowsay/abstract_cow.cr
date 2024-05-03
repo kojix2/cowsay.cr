@@ -31,14 +31,6 @@ module Cowsay
       construct_balloon(message, "think") + "\n" + render_cow
     end
 
-    # def self.say(message, type = "default", face = "default")
-    #   Cow.new({cow: type, face_type: face}).say(message)
-    # end
-
-    # def self.think(message, type = "default", face = "default")
-    #   Cow.new({cow: type, face_type: face}).think(message)
-    # end
-
     private def construct_balloon(message, balloon_type)
       if balloon_type == "think"
         @thoughts = "o"
@@ -113,6 +105,10 @@ module Cowsay
         lines << word.delete_at(0..(MAX_LINE_LENGTH - 1))
       end
       lines.compact
+    end
+
+    def render_cow
+      raise NotImplementedError.new("You must implement render_cow in your cow class")
     end
   end
 end
