@@ -1,4 +1,4 @@
-require "./cowsay"
+require "../src/cowsay"
 
 cow = CowSay::Cow.new
 
