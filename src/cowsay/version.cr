@@ -1,7 +1,5 @@
 require "./abstract_cow"
 
 module CowSay
-  module CrystalCowsay
-    VERSION = "0.1.3"
-  end
+  VERSION = {{ `shards version #{__DIR__}`.chomp.stringify }}
 end
