@@ -12,6 +12,7 @@ tongue = nil
 character = "cow"
 mode = "default"
 action = Action::Say
+debug = false
 
 parser = OptionParser.parse do |parser|
   parser.banner = "Usage: cowsay [options] message"
@@ -22,10 +23,10 @@ parser = OptionParser.parse do |parser|
   parser.on("-n", "--think", "Makes the cow think") { action = Action::Think }
 
   # Eye option
-  parser.on("-e EYES", "--eyes=EYES", "Sets the eyes of the cow (default 'oo')") { |e| eyes = e }
+  parser.on("-e", "--eyes EYES", "Sets the eyes of the cow (default 'oo')") { |e| eyes = e }
 
   # Tongue option
-  parser.on("-T TONGUE", "--tongue=TONGUE", "Sets the tongue of the cow (default '  ')") { |t| tongue = t }
+  parser.on("-T", "--tongue TONGUE", "Sets the tongue of the cow (default '  ')") { |t| tongue = t }
 
   # Mode options
   parser.on("-b", "--borg", "Borg mode") { mode = "borg" }
@@ -36,6 +37,13 @@ parser = OptionParser.parse do |parser|
   parser.on("-t", "--tired", "Tired mode") { mode = "tired" }
   parser.on("-w", "--wired", "Wired mode") { mode = "wired" }
   parser.on("-y", "--young", "Youthful appearance") { mode = "young" }
+
+  parser.on("-l", "--list", "Lists available characters") do
+    puts Cowsay.character_names.join(STDOUT.tty? ? ", " : "\n")
+    exit
+  end
+
+  parser.on("-D", "--debug", "Print error trace") { debug = true }
 
   # Version option
   parser.on("-v", "--version", "Displays version information") do
@@ -68,25 +76,33 @@ if message.empty?
 end
 
 begin
-case action
-when Action::Say
-  puts Cowsay.say(
-    message,
-    character: character,
-    mode: mode, eyes: eyes, tongue: tongue
-  )
-when Action::Think
-  puts Cowsay.think(
-    message,
-    character: character,
-    mode: mode, eyes: eyes, tongue: tongue
-  )
-end
+  case action
+  when Action::Say
+    puts Cowsay.say(
+      message,
+      character: character,
+      mode: mode, eyes: eyes, tongue: tongue
+    )
+  when Action::Think
+    puts Cowsay.think(
+      message,
+      character: character,
+      mode: mode, eyes: eyes, tongue: tongue
+    )
+  end
 rescue Cowsay::UnknownCharacterError
-  STDERR.puts   STDERR.puts Cowsay.say(
+  STDERR.puts STDERR.puts Cowsay.say(
     "Unknown character: #{character}",
     character: "random",
     mode: "wired"
   )
+  exit(1)
+rescue ex
+  STDERR.puts Cowsay.say(
+    "ERROR: #{ex.class} #{ex.message}",
+    character: "random",
+    mode: "paranoid"
+  )
+  STDERR.puts "\n#{ex.backtrace.join("\n")}" if debug
   exit(1)
 end

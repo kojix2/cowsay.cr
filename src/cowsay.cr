@@ -17,7 +17,7 @@ module Cowsay
       .think(message)
   end
 
-  private CHARACTER_TABLE= {
+  private CHARACTER_TABLE = {
     "beavis.zen"        => BeavisZen,
     "bong"              => Bong,
     "bud-frogs"         => BudFrogs,
@@ -79,5 +79,9 @@ module Cowsay
         raise UnknownCharacterError.new "Unknown character: #{character}"
       end
     end
+  end
+
+  def self.character_names
+    CHARACTER_TABLE.keys
   end
 end
