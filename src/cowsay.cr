@@ -3,12 +3,16 @@ require "./cowsay/abstract_cow"
 require "./cowsay/cows/*"
 
 module Cowsay
-  def self.say(message, type = "cow", face = "default")
-    self[type].new(face_type: face).say(message)
+  def self.say(message, type = "cow", mode = "default", eyes = nil, tongue = nil)
+    self[type]
+      .new(mode: mode, eyes: eyes, tongue: tongue)
+      .say(message)
   end
 
-  def self.think(message, type = "cow", face = "default")
-    self[type].new(face_type: face).think(message)
+  def self.think(message, type = "cow", mode = "default", eyes = nil, tongue = nil)
+    self[type]
+      .new(mode: mode, eyes: eyes, tongue: tongue)
+      .think(message)
   end
 
   def self.[](type) : Class
