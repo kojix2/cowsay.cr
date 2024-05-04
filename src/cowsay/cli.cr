@@ -9,11 +9,14 @@ end
 # Define variables to store option values
 eyes = nil
 tongue = nil
+character = "cow"
 mode = "default"
 action = Action::Say
 
 OptionParser.parse do |parser|
   parser.banner = "Usage: cowsay [options] message"
+
+  parser.on("-c", "--cow CHARACTER", "Selects a character") { |c| character = c }
 
   # Think option
   parser.on("-n", "--think", "Makes the cow think") { action = Action::Think }
@@ -55,7 +58,15 @@ end
 
 case action
 when Action::Say
-  puts Cowsay.say(ARGV.join(" "), mode: mode, eyes: eyes, tongue: tongue)
+  puts Cowsay.say(
+    ARGV.join(" "),
+    character: character,
+    mode: mode, eyes: eyes, tongue: tongue
+  )
 when Action::Think
-  puts Cowsay.think(ARGV.join(" "), mode: mode, eyes: eyes, tongue: tongue)
+  puts Cowsay.think(
+    ARGV.join(" "),
+    character: character,
+    mode: mode, eyes: eyes, tongue: tongue
+  )
 end

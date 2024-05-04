@@ -3,20 +3,20 @@ require "./cowsay/abstract_cow"
 require "./cowsay/cows/*"
 
 module Cowsay
-  def self.say(message, type = "cow", mode = "default", eyes = nil, tongue = nil)
-    self[type]
+  def self.say(message, character = "cow", mode = "default", eyes = nil, tongue = nil)
+    self[character]
       .new(mode: mode, eyes: eyes, tongue: tongue)
       .say(message)
   end
 
-  def self.think(message, type = "cow", mode = "default", eyes = nil, tongue = nil)
-    self[type]
+  def self.think(message, character = "cow", mode = "default", eyes = nil, tongue = nil)
+    self[character]
       .new(mode: mode, eyes: eyes, tongue: tongue)
       .think(message)
   end
 
-  def self.[](type) : Class
-    case type.to_s
+  def self.[](character) : Class
+    case character.to_s
     when "beavis.zen"        then BeavisZen
     when "bong"              then Bong
     when "bud-frogs"         then BudFrogs
@@ -67,7 +67,7 @@ module Cowsay
     when "vader-koala"       then VaderKoala
     when "www"               then Www
     else
-      raise "Unknown cow type: #{type}"
+      raise "Unknown cow type: #{character}"
     end
   end
 end
