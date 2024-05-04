@@ -1,7 +1,4 @@
 # Cowsay (In Crystal)
-
-Forked from [ruby cowsay](https://github.com/PatrickTulskie/ruby_cowsay)
-
      ___________
     < OMGHI2U!! >
      -----------
@@ -10,6 +7,43 @@ Forked from [ruby cowsay](https://github.com/PatrickTulskie/ruby_cowsay)
               (__)\       )\/\
                   ||----w |
                   ||     ||
+
+## Compilation
+
+```
+git clone https://github.com/kojix2/cowsay.cr
+shards build
+bin/cowsay OMGHI2U!!
+```
+## Usage
+
+```
+Usage: cowsay [options] message
+    -c, --cow CHARACTER              Selects a character
+    -n, --think                      Makes the cow think
+    -e EYES, --eyes=EYES             Sets the eyes of the cow (default 'oo')
+    -T TONGUE, --tongue=TONGUE       Sets the tongue of the cow (default '  ')
+    -b, --borg                       Borg mode
+    -d, --dead                       appear dead
+    -g, --greedy                     Greedy mode
+    -p, --paranoid                   Paranoid mode
+    -s, --stoned                     Stoned mode
+    -t, --tired                      Tired mode
+    -w, --wired                      Wired mode
+    -y, --young                      Youthful appearance
+    -v, --version                    Displays version information
+    -h, --help                       Displays this help message
+```
+
+## Development / Contributing
+
+Forked from [ruby cowsay](https://github.com/PatrickTulskie/ruby_cowsay)
+
+- Fork this repository
+- Report bugs
+- Fix bugs and submit pull requests
+- Write, clarify, or fix documentation
+- Suggest or add new features
 
 ## Special Thanks
 
