@@ -18,7 +18,7 @@ module Cowsay
     MAX_LINE_LENGTH = 36
 
     def initialize(@mode = "default", eyes = nil, tongue = nil)
-      e, t = FACE_TYPES[@mode]
+      e, t = FACE_TYPES.fetch(@mode) { raise ArgumentError.new("Invalid mode: #{@mode}") }
       @eyes = eyes || e
       @tongue = tongue || t
     end

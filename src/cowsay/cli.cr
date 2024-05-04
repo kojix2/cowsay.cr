@@ -32,7 +32,7 @@ OptionParser.parse do |parser|
   parser.on("-s", "--stoned", "Stoned mode") { mode = "stoned" }
   parser.on("-t", "--tired", "Tired mode") { mode = "tired" }
   parser.on("-w", "--wired", "Wired mode") { mode = "wired" }
-  parser.on("-y", "--youthful", "Youthful appearance") { mode = "youthful" }
+  parser.on("-y", "--youthful", "Youthful appearance") { mode = "young" }
 
   # Version option
   parser.on("-v", "--version", "Displays version information") do
