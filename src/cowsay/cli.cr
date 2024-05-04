@@ -13,7 +13,7 @@ character = "cow"
 mode = "default"
 action = Action::Say
 
-OptionParser.parse do |parser|
+parser = OptionParser.parse do |parser|
   parser.banner = "Usage: cowsay [options] message"
 
   parser.on("-c", "--cow CHARACTER", "Selects a character") { |c| character = c }
@@ -56,17 +56,37 @@ OptionParser.parse do |parser|
   end
 end
 
+message = ARGV.join(" ")
+if message.empty?
+  STDERR.puts parser
+  STDERR.puts Cowsay.say(
+    "OMG! You didn't provide a message!",
+    character: "random",
+    mode: "dead"
+  )
+  exit(1)
+end
+
+begin
 case action
 when Action::Say
   puts Cowsay.say(
-    ARGV.join(" "),
+    message,
     character: character,
     mode: mode, eyes: eyes, tongue: tongue
   )
 when Action::Think
   puts Cowsay.think(
-    ARGV.join(" "),
+    message,
     character: character,
     mode: mode, eyes: eyes, tongue: tongue
   )
+end
+rescue Cowsay::UnknownCharacterError
+  STDERR.puts   STDERR.puts Cowsay.say(
+    "Unknown character: #{character}",
+    character: "random",
+    mode: "wired"
+  )
+  exit(1)
 end
