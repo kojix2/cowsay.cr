@@ -9,7 +9,7 @@ module Cowsay
     end
 
     def space_eyes
-      @eyes = "●●" if face_type == "default"
+      @eyes = "●●" if @mode == "default"
       "#{@eyes[0]}    #{@eyes[0]}"
     end
 

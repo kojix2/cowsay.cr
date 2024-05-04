@@ -2,7 +2,7 @@ module Cowsay
   class AbstractCow
     property eyes : String
     property tongue : String
-    property face_type : String
+    property mode : String
 
     FACE_TYPES = {
       "default"  => ["oo", "  "],
@@ -17,8 +17,8 @@ module Cowsay
     }
     MAX_LINE_LENGTH = 36
 
-    def initialize(@face_type = "default", eyes = nil, tongue = nil)
-      e, t = FACE_TYPES[@face_type]
+    def initialize(@mode = "default", eyes = nil, tongue = nil)
+      e, t = FACE_TYPES[@mode]
       @eyes = eyes || e
       @tongue = tongue || t
     end
@@ -40,7 +40,7 @@ module Cowsay
         border = %w[< >]
       else
         @thoughts = "\\"
-        border = %w[/ \\ \\ / | |]
+        border = ["/", "\\", "|", "|", "\\", "/"]
       end
 
       formatted_message = format_message(message)
@@ -55,11 +55,13 @@ module Cowsay
           s << " #{"_" * (longest_line + 2)} \n"
           formatted_message.each_with_index do |line, index|
             case index
-            when 0 then left = border[0]
-            right = border[1]
-            when (formatted_message.size - 1) then left = border[2]
-            right = border[3]
-            else left = border[4]
+            when 0
+              left = border[0]
+              right = border[1]
+            when left = border[2]
+              right = border[3]
+            else (formatted_message.size - 1)
+            left = border[4]
             right = border[5]
             end
             s << "#{left} #{line}#{" " * (longest_line - line.size)} #{right}\n"
@@ -80,31 +82,21 @@ module Cowsay
             line.clear
           end
           if word.size > MAX_LINE_LENGTH
-            message_lines << line.to_s
-            line.clear
-            broken_word = split_word(word)
-            message_lines = message_lines.concat(broken_word)
+            strings = word.scan(/.{1,#{MAX_LINE_LENGTH}}/).map { |s| s.to_s }.compact
+            line << strings.pop
+            message_lines = message_lines.concat(strings)
           elsif line.size == 0
             line << word
           else
             line << " " << word
           end
         end
+        message_lines << line.to_s
       else
         message_lines << message
       end
 
       message_lines
-    end
-
-    private def split_word(word)
-      return [word] unless word.size > MAX_LINE_LENGTH
-
-      lines = [] of String
-      while (word.size > 0)
-        lines << word.delete_at(0..(MAX_LINE_LENGTH - 1))
-      end
-      lines.compact
     end
 
     def render_cow
