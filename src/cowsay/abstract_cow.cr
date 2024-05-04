@@ -58,11 +58,14 @@ module Cowsay
             when 0
               left = border[0]
               right = border[1]
-            when left = border[2]
+            when 1..(formatted_message.size - 2)
+              left = border[2]
               right = border[3]
-            else (formatted_message.size - 1)
-            left = border[4]
-            right = border[5]
+            when (formatted_message.size - 1)
+              left = border[4]
+              right = border[5]
+            else
+              raise "Invalid index"
             end
             s << "#{left} #{line}#{" " * (longest_line - line.size)} #{right}\n"
           end
