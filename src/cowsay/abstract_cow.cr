@@ -1,3 +1,5 @@
+require "uniwidth"
+
 module Cowsay
   class AbstractCow
     property eyes : String
@@ -35,7 +37,7 @@ module Cowsay
       if balloon_type == "think"
         @thoughts = "o"
         border = %w[( ) ( ) ( )]
-      elsif message.size < MAX_LINE_LENGTH
+      elsif UnicodeCharWidth.width(message) < MAX_LINE_LENGTH
         @thoughts = "\\"
         border = %w[< >]
       else
@@ -43,49 +45,50 @@ module Cowsay
         border = ["/", "\\", "|", "|", "\\", "/"]
       end
 
-      formatted_message = format_message(message)
+      formatted_messages = format_message(message)
       balloon_lines = String.build do |s|
-        if formatted_message.size == 1
-          longest_line = formatted_message.first.size
-          s << " #{"_" * (longest_line + 2)} \n"
-          s << "#{border.first} #{formatted_message.first} #{border.last}\n"
-          s << " #{"-" * (longest_line + 2)} "
+        if formatted_messages.size == 1
+          msg = formatted_messages.first
+          max_line_width = UnicodeCharWidth.width(msg)
+          s << " #{"_" * (max_line_width + 2)} \n"
+          s << "#{border.first} #{msg} #{border.last}\n"
+          s << " #{"-" * (max_line_width + 2)} "
         else
-          longest_line = formatted_message.map { |line| line.size }.sort.last
-          s << " #{"_" * (longest_line + 2)} \n"
-          formatted_message.each_with_index do |line, index|
+          max_line_width = formatted_messages.map { |line| UnicodeCharWidth.width(line) }.max
+          s << " #{"_" * (max_line_width + 2)} \n"
+          formatted_messages.each_with_index do |line, index|
             case index
             when 0
               left = border[0]
               right = border[1]
-            when 1..(formatted_message.size - 2)
+            when 1..(formatted_messages.size - 2)
               left = border[2]
               right = border[3]
-            when (formatted_message.size - 1)
+            when (formatted_messages.size - 1)
               left = border[4]
               right = border[5]
             else
               raise "Invalid index"
             end
-            s << "#{left} #{line}#{" " * (longest_line - line.size)} #{right}\n"
+            s << "#{left} #{line}#{" " * (max_line_width - UnicodeCharWidth.width(line))} #{right}\n"
           end
-          s << " #{"-" * (longest_line + 2)} "
+          s << " #{"-" * (max_line_width + 2)} "
         end
       end
     end
 
     private def format_message(message)
       message_lines = [] of String
-      if message.size > MAX_LINE_LENGTH
+      if UnicodeCharWidth.width(message) > MAX_LINE_LENGTH
         words = message.split
         line = IO::Memory.new
         words.each do |word|
-          if line.size > 0 && (line.size + word.size) > MAX_LINE_LENGTH
+          if line.size > 0 && (UnicodeCharWidth.width(line.to_s) + UnicodeCharWidth.width(word)) > MAX_LINE_LENGTH
             message_lines << line.to_s
             line.clear
           end
-          if word.size > MAX_LINE_LENGTH
-            strings = word.scan(/.{1,#{MAX_LINE_LENGTH}}/).map { |s| s.to_s }.compact
+          if UnicodeCharWidth.width(word) > MAX_LINE_LENGTH
+            strings = UnicodeCharWidth.wrap(word, MAX_LINE_LENGTH).lines.compact
             line << strings.pop
             message_lines = message_lines.concat(strings)
           elsif line.size == 0

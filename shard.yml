@@ -5,6 +5,9 @@ targets:
   cowsay:
     main: src/cowsay/cli.cr
 
-description: |
-  A Crystal implementation of the classic cowsay program. 
+dependencies:
+  uniwidth:
+    github: naqvis/uni_char_width
 
+description: |
+  A Crystal implementation of the classic cowsay program.
