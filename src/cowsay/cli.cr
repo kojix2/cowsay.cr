@@ -12,6 +12,7 @@ tongue = nil
 character = "cow"
 mode = "default"
 action = Action::Say
+wrap = 40
 debug = false
 
 parser = OptionParser.parse do |parser|
@@ -42,6 +43,8 @@ parser = OptionParser.parse do |parser|
     puts Cowsay.character_names.join(STDOUT.tty? ? ", " : "\n")
     exit
   end
+
+  parser.on("-W","--wrap-column WIDTH", "Sets the width of the cow") { |w| wrap = w.to_i }
 
   parser.on("-D", "--debug", "Print error trace") { debug = true }
 
@@ -81,13 +84,15 @@ begin
     puts Cowsay.say(
       message,
       character: character,
-      mode: mode, eyes: eyes, tongue: tongue
+      mode: mode, eyes: eyes, tongue: tongue,
+      wrapcolumn: wrap
     )
   when Action::Think
     puts Cowsay.think(
       message,
       character: character,
-      mode: mode, eyes: eyes, tongue: tongue
+      mode: mode, eyes: eyes, tongue: tongue,
+      wrapcolumn: wrap
     )
   end
 rescue Cowsay::UnknownCharacterError

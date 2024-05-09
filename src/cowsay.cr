@@ -5,15 +5,15 @@ require "./cowsay/cows/*"
 module Cowsay
   class UnknownCharacterError < ArgumentError; end
 
-  def self.say(message, character = "cow", mode = "default", eyes = nil, tongue = nil)
+  def self.say(message, character = "cow", mode = "default", eyes = nil, tongue = nil, wrapcolumn = 40)
     self[character]
-      .new(mode: mode, eyes: eyes, tongue: tongue)
+      .new(mode: mode, eyes: eyes, tongue: tongue, wrapcolumn: wrapcolumn)
       .say(message)
   end
 
-  def self.think(message, character = "cow", mode = "default", eyes = nil, tongue = nil)
+  def self.think(message, character = "cow", mode = "default", eyes = nil, tongue = nil, wrapcolumn = 40)
     self[character]
-      .new(mode: mode, eyes: eyes, tongue: tongue)
+      .new(mode: mode, eyes: eyes, tongue: tongue, wrapcolumn: wrapcolumn)
       .think(message)
   end
 

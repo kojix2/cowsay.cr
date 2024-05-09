@@ -5,6 +5,7 @@ module Cowsay
     property eyes : String
     property tongue : String
     property mode : String
+    property wrapcolumn : Int32
 
     FACE_TYPES = {
       "default"  => ["oo", "  "],
@@ -17,12 +18,12 @@ module Cowsay
       "wired"    => ["OO", "  "],
       "young"    => ["..", "  "],
     }
-    MAX_LINE_LENGTH = 36
 
-    def initialize(@mode = "default", eyes = nil, tongue = nil)
+    def initialize(@mode = "default", eyes = nil, tongue = nil, wrapcolumn = 40)
       e, t = FACE_TYPES.fetch(@mode) { raise ArgumentError.new("Invalid mode: #{@mode}") }
       @eyes = eyes || e
       @tongue = tongue || t
+      @wrapcolumn = wrapcolumn
     end
 
     def say(message, balloon_type = "say")
@@ -37,7 +38,7 @@ module Cowsay
       if balloon_type == "think"
         @thoughts = "o"
         border = %w[( ) ( ) ( )]
-      elsif UnicodeCharWidth.width(message) < MAX_LINE_LENGTH
+      elsif UnicodeCharWidth.width(message) <= wrapcolumn
         @thoughts = "\\"
         border = %w[< >]
       else
@@ -79,16 +80,16 @@ module Cowsay
 
     private def format_message(message)
       message_lines = [] of String
-      if UnicodeCharWidth.width(message) > MAX_LINE_LENGTH
+      if UnicodeCharWidth.width(message) > wrapcolumn
         words = message.split
         line = IO::Memory.new
         words.each do |word|
-          if line.size > 0 && (UnicodeCharWidth.width(line.to_s) + UnicodeCharWidth.width(word)) > MAX_LINE_LENGTH
+          if line.size > 0 && (UnicodeCharWidth.width(line.to_s) + UnicodeCharWidth.width(word)) > wrapcolumn
             message_lines << line.to_s
             line.clear
           end
-          if UnicodeCharWidth.width(word) > MAX_LINE_LENGTH
-            strings = UnicodeCharWidth.wrap(word, MAX_LINE_LENGTH).lines.compact
+          if UnicodeCharWidth.width(word) > wrapcolumn
+            strings = UnicodeCharWidth.wrap(word, wrapcolumn).lines.compact
             line << strings.pop
             message_lines = message_lines.concat(strings)
           elsif line.size == 0
