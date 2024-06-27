@@ -1,4 +1,7 @@
 # Cowsay (In Crystal)
+
+[![build](https://github.com/kojix2/cowsay.cr/actions/workflows/build.yml/badge.svg)](https://github.com/kojix2/cowsay.cr/actions/workflows/build.yml)
+
      ___________
     < OMGHI2U!! >
      -----------
