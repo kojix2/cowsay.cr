@@ -19,8 +19,8 @@ parser = OptionParser.parse do |parser|
   parser.banner = <<-BANNER
 
     Program: cowsay (in Crystal)
-    Version: #{VERSION}
-    Source:  #{SOURCE}
+    Version: #{Cowsay::VERSION}
+    Source:  #{Cowsay::SOURCE}
 
     Usage:   cowsay [options] message
   BANNER
