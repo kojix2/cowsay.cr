@@ -16,7 +16,14 @@ wrap = 40
 debug = false
 
 parser = OptionParser.parse do |parser|
-  parser.banner = "Usage: cowsay [options] message"
+  parser.banner = <<-BANNER
+
+    Program: cowsay (in Crystal)
+    Version: #{VERSION}
+    Source:  #{SOURCE}
+
+    Usage:   cowsay [options] message
+  BANNER
 
   parser.on("-c", "--cow CHARACTER", "Selects a character") { |c| character = c }
 
@@ -44,7 +51,7 @@ parser = OptionParser.parse do |parser|
     exit
   end
 
-  parser.on("-W","--wrap-column WIDTH", "Sets the width of the cow") { |w| wrap = w.to_i }
+  parser.on("-W", "--wrap-column WIDTH", "Sets the width of the cow") { |w| wrap = w.to_i }
 
   parser.on("-D", "--debug", "Print error trace") { debug = true }
 
