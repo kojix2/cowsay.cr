@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu", "macos", "windows"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: latest
+      - name: Install dependencies
+        run: shards install --without-development --release
+      - name: Run tests
+        run: crystal spec
+      - name: Build executable
+        run: shards build --release
+      - name: Run executable (help)
+        run: bin/cowsay --help
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cowsay-${{ matrix.os }}
+          path: bin/${{ matrix.os == 'windows' && 'cowsay.exe' || 'cowsay' }}
