@@ -47,7 +47,7 @@ module Cowsay
       end
 
       formatted_messages = format_message(message)
-      balloon_lines = String.build do |s|
+      String.build do |s|
         if formatted_messages.size == 1
           msg = formatted_messages.first
           max_line_width = UnicodeCharWidth.width(msg)
@@ -55,7 +55,7 @@ module Cowsay
           s << "#{border.first} #{msg} #{border.last}\n"
           s << " #{"-" * (max_line_width + 2)} "
         else
-          max_line_width = formatted_messages.map { |line| UnicodeCharWidth.width(line) }.max
+          max_line_width = formatted_messages.max_of { |line| UnicodeCharWidth.width(line) }
           s << " #{"_" * (max_line_width + 2)} \n"
           formatted_messages.each_with_index do |line, index|
             case index
