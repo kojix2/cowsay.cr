@@ -6,7 +6,7 @@ module Cowsay
       <<-COW
          #{@thoughts}
           #{@thoughts}
-            ^__^ 
+            ^__^
     _______/(#{@eyes})
 /\\/(       /(__)
    | W----|| |~|

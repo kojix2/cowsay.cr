@@ -7,14 +7,14 @@ module Cowsay
    #{@thoughts}
     #{@thoughts}        .
      .---.  //
-    Y|o o|Y// 
-   /_(i=i)K/ 
-   ~()~*~()~  
-    (_)-(_)   
+    Y|o o|Y//
+   /_(i=i)K/
+   ~()~*~()~
+    (_)-(_)
 
-     Darth 
-     Vader    
-     koala        
+     Darth
+     Vader
+     koala
 
 COW
     end

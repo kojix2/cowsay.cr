@@ -4,7 +4,7 @@ module Cowsay
   class Milk < AbstractCow
     def render_cow
       <<-COW
- #{@thoughts}     ____________ 
+ #{@thoughts}     ____________
   #{@thoughts}    |__________|
       /           /\\
      /           /  \\
@@ -17,8 +17,8 @@ module Cowsay
   / |  \\_____/ |   / /
  / /|          |  / /|
 /||\\|          | /||\\/
-    -------------|   
-        | |    | | 
+    -------------|
+        | |    | |
        <__/    \\__>
 
 COW

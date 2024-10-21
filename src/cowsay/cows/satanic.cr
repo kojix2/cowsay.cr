@@ -5,12 +5,12 @@ module Cowsay
     def render_cow
       <<-COW
      #{@thoughts}
-      #{@thoughts}  (__)  
-         (\\/)  
-  /-------\\/    
- / | 666 ||    
-*  ||----||      
-   ~~    ~~      
+      #{@thoughts}  (__)
+         (\\/)
+  /-------\\/
+ / | 666 ||
+*  ||----||
+   ~~    ~~
 
 COW
     end

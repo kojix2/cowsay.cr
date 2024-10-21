@@ -7,13 +7,13 @@ module Cowsay
   #{@thoughts}
    #{@thoughts}          .
        ___   //
-     {~._.~}// 
-      ( Y )K/  
-     ()~*~()   
-     (_)-(_)   
-     Luke    
+     {~._.~}//
+      ( Y )K/
+     ()~*~()
+     (_)-(_)
+     Luke
      Sywalker
-     koala   
+     koala
 
 COW
     end

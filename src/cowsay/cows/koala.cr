@@ -6,11 +6,11 @@ module Cowsay
       <<-COW
   #{@thoughts}
    #{@thoughts}
-       ___  
+       ___
      {~._.~}
       ( Y )
-     ()~*~()   
-     (_)-(_)   
+     ()~*~()
+     (_)-(_)
 
 COW
     end

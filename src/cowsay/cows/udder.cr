@@ -5,14 +5,14 @@ module Cowsay
     def render_cow
       <<-COW
   #{@thoughts}
-   #{@thoughts}    (__)               
-        #{@eyes}\\               
-       ('') \\---------     
-        #{@tongue}\\           \\    
-           |          |\\   
-           ||---(  )_|| *  
-           ||    UU  ||    
-           ==        ==    
+   #{@thoughts}    (__)
+        #{@eyes}\\
+       ('') \\---------
+        #{@tongue}\\           \\
+           |          |\\
+           ||---(  )_|| *
+           ||    UU  ||
+           ==        ==
 
 COW
     end

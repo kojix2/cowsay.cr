@@ -6,7 +6,7 @@ module Cowsay
       <<-COW
      #{@thoughts}
       #{@thoughts}
-        ,__, |    | 
+        ,__, |    |
         (oo)\\|    |___
         (__)\\|    |   )\\_
              |    |_w |  \\

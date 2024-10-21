@@ -10,7 +10,7 @@ module Cowsay
          #{@thoughts}  (#{@eyes})\\_____/_\\ \\
             (__)\\       ) /
              #{@tongue} ||----w ((
-                ||     ||>> 
+                ||     ||>>
 
 COW
     end
