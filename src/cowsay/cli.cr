@@ -14,6 +14,7 @@ mode = "default"
 action = Action::Say
 wrap = 40
 debug = false
+color = false
 
 parser = OptionParser.parse do |parser|
   parser.banner = <<-BANNER
@@ -53,6 +54,8 @@ parser = OptionParser.parse do |parser|
 
   parser.on("-W", "--wrap-column WIDTH", "Sets the width of the cow") { |w| wrap = w.to_i }
 
+  parser.on("-C", "--color", "Enable colored output") { color = true }
+
   parser.on("-D", "--debug", "Print error trace") { debug = true }
 
   # Version option
@@ -79,8 +82,8 @@ if message.empty?
   STDERR.puts parser
   STDERR.puts Cowsay.say(
     "OMG! You didn't provide a message!",
-    character: "random",
-    mode: "dead"
+    "random",
+    "dead"
   )
   exit(1)
 end
@@ -90,30 +93,30 @@ begin
   when Action::Say
     puts Cowsay.say(
       message,
-      character: character,
-      mode: mode, eyes: eyes, tongue: tongue,
-      wrapcolumn: wrap
+      character,
+      mode, eyes, tongue,
+      wrap, color
     )
   when Action::Think
     puts Cowsay.think(
       message,
-      character: character,
-      mode: mode, eyes: eyes, tongue: tongue,
-      wrapcolumn: wrap
+      character,
+      mode, eyes, tongue,
+      wrap, color
     )
   end
 rescue Cowsay::UnknownCharacterError
   STDERR.puts STDERR.puts Cowsay.say(
     "Unknown character: #{character}",
-    character: "random",
-    mode: "wired"
+    "random",
+    "wired"
   )
   exit(1)
 rescue ex
   STDERR.puts Cowsay.say(
     "ERROR: #{ex.class} #{ex.message}",
-    character: "random",
-    mode: "paranoid"
+    "random",
+    "paranoid"
   )
   STDERR.puts "\n#{ex.backtrace.join("\n")}" if debug
   exit(1)
