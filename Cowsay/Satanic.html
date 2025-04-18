@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cowsay">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="cowsay">
+  <title>Cowsay::Satanic - cowsay main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cowsay
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="cowsay/Action" data-name="action">
+      <a href="../Action.html">Action</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="cowsay/Cowsay" data-name="cowsay">
+      <a href="../Cowsay.html">Cowsay</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cowsay/Cowsay/AbstractCow" data-name="cowsay::abstractcow">
+      <a href="../Cowsay/AbstractCow.html">AbstractCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/BeavisZen" data-name="cowsay::beaviszen">
+      <a href="../Cowsay/BeavisZen.html">BeavisZen</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Bong" data-name="cowsay::bong">
+      <a href="../Cowsay/Bong.html">Bong</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/BudFrogs" data-name="cowsay::budfrogs">
+      <a href="../Cowsay/BudFrogs.html">BudFrogs</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Bunny" data-name="cowsay::bunny">
+      <a href="../Cowsay/Bunny.html">Bunny</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Capybara" data-name="cowsay::capybara">
+      <a href="../Cowsay/Capybara.html">Capybara</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cheese" data-name="cowsay::cheese">
+      <a href="../Cowsay/Cheese.html">Cheese</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cow" data-name="cowsay::cow">
+      <a href="../Cowsay/Cow.html">Cow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cower" data-name="cowsay::cower">
+      <a href="../Cowsay/Cower.html">Cower</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Daemon" data-name="cowsay::daemon">
+      <a href="../Cowsay/Daemon.html">Daemon</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Dragon" data-name="cowsay::dragon">
+      <a href="../Cowsay/Dragon.html">Dragon</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/DragonAndCow" data-name="cowsay::dragonandcow">
+      <a href="../Cowsay/DragonAndCow.html">DragonAndCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Elephant" data-name="cowsay::elephant">
+      <a href="../Cowsay/Elephant.html">Elephant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/ElephantInSnake" data-name="cowsay::elephantinsnake">
+      <a href="../Cowsay/ElephantInSnake.html">ElephantInSnake</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Eyes" data-name="cowsay::eyes">
+      <a href="../Cowsay/Eyes.html">Eyes</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/FlamingSheep" data-name="cowsay::flamingsheep">
+      <a href="../Cowsay/FlamingSheep.html">FlamingSheep</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Ghostbusters" data-name="cowsay::ghostbusters">
+      <a href="../Cowsay/Ghostbusters.html">Ghostbusters</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/HeadIn" data-name="cowsay::headin">
+      <a href="../Cowsay/HeadIn.html">HeadIn</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Hellokitty" data-name="cowsay::hellokitty">
+      <a href="../Cowsay/Hellokitty.html">Hellokitty</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kiss" data-name="cowsay::kiss">
+      <a href="../Cowsay/Kiss.html">Kiss</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kitty" data-name="cowsay::kitty">
+      <a href="../Cowsay/Kitty.html">Kitty</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Koala" data-name="cowsay::koala">
+      <a href="../Cowsay/Koala.html">Koala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kosh" data-name="cowsay::kosh">
+      <a href="../Cowsay/Kosh.html">Kosh</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/LukeKoala" data-name="cowsay::lukekoala">
+      <a href="../Cowsay/LukeKoala.html">LukeKoala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/MechAndCow" data-name="cowsay::mechandcow">
+      <a href="../Cowsay/MechAndCow.html">MechAndCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Meow" data-name="cowsay::meow">
+      <a href="../Cowsay/Meow.html">Meow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Milk" data-name="cowsay::milk">
+      <a href="../Cowsay/Milk.html">Milk</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Moofasa" data-name="cowsay::moofasa">
+      <a href="../Cowsay/Moofasa.html">Moofasa</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Moose" data-name="cowsay::moose">
+      <a href="../Cowsay/Moose.html">Moose</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Mutilated" data-name="cowsay::mutilated">
+      <a href="../Cowsay/Mutilated.html">Mutilated</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Owl" data-name="cowsay::owl">
+      <a href="../Cowsay/Owl.html">Owl</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Ren" data-name="cowsay::ren">
+      <a href="../Cowsay/Ren.html">Ren</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cowsay/Cowsay/Satanic" data-name="cowsay::satanic">
+      <a href="../Cowsay/Satanic.html">Satanic</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Sheep" data-name="cowsay::sheep">
+      <a href="../Cowsay/Sheep.html">Sheep</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Skeleton" data-name="cowsay::skeleton">
+      <a href="../Cowsay/Skeleton.html">Skeleton</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Small" data-name="cowsay::small">
+      <a href="../Cowsay/Small.html">Small</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Sodomized" data-name="cowsay::sodomized">
+      <a href="../Cowsay/Sodomized.html">Sodomized</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Stegosaurus" data-name="cowsay::stegosaurus">
+      <a href="../Cowsay/Stegosaurus.html">Stegosaurus</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Stimpy" data-name="cowsay::stimpy">
+      <a href="../Cowsay/Stimpy.html">Stimpy</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Supermilker" data-name="cowsay::supermilker">
+      <a href="../Cowsay/Supermilker.html">Supermilker</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Surgery" data-name="cowsay::surgery">
+      <a href="../Cowsay/Surgery.html">Surgery</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Tanuki" data-name="cowsay::tanuki">
+      <a href="../Cowsay/Tanuki.html">Tanuki</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Telebears" data-name="cowsay::telebears">
+      <a href="../Cowsay/Telebears.html">Telebears</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/ThreeEyes" data-name="cowsay::threeeyes">
+      <a href="../Cowsay/ThreeEyes.html">ThreeEyes</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Turkey" data-name="cowsay::turkey">
+      <a href="../Cowsay/Turkey.html">Turkey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Turtle" data-name="cowsay::turtle">
+      <a href="../Cowsay/Turtle.html">Turtle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Tux" data-name="cowsay::tux">
+      <a href="../Cowsay/Tux.html">Tux</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Udder" data-name="cowsay::udder">
+      <a href="../Cowsay/Udder.html">Udder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/UnknownCharacterError" data-name="cowsay::unknowncharactererror">
+      <a href="../Cowsay/UnknownCharacterError.html">UnknownCharacterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Vader" data-name="cowsay::vader">
+      <a href="../Cowsay/Vader.html">Vader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/VaderKoala" data-name="cowsay::vaderkoala">
+      <a href="../Cowsay/VaderKoala.html">VaderKoala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Www" data-name="cowsay::www">
+      <a href="../Cowsay/Www.html">Www</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> Cowsay::<wbr>Satanic
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cowsay/Satanic.html">Cowsay::Satanic</a></li><li class="superclass"><a href="../Cowsay/AbstractCow.html">Cowsay::AbstractCow</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/satanic.cr#L4" target="_blank">
+        cowsay/cows/satanic.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#render_cow-instance-method" class="signature"><strong>#render_cow</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+  <h3>Instance methods inherited from class <code><a href="../Cowsay/AbstractCow.html">Cowsay::AbstractCow</a></code></h3>
+  
+  
+    <a href="../Cowsay/AbstractCow.html#color%3ABool-instance-method" class="tooltip">
+      <span>color : Bool</span>
+    color</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#color%3D%28color%3ABool%29-instance-method" class="tooltip">
+      <span>color=(color : Bool)</span>
+    color=</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#eyes%3AString-instance-method" class="tooltip">
+      <span>eyes : String</span>
+    eyes</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#eyes%3D%28eyes%3AString%29-instance-method" class="tooltip">
+      <span>eyes=(eyes : String)</span>
+    eyes=</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#mode%3AString-instance-method" class="tooltip">
+      <span>mode : String</span>
+    mode</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#mode%3D%28mode%3AString%29-instance-method" class="tooltip">
+      <span>mode=(mode : String)</span>
+    mode=</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#render_cow-instance-method" class="tooltip">
+      <span>render_cow</span>
+    render_cow</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#say%28message%2Cballoon_type%3D%22say%22%29-instance-method" class="tooltip">
+      <span>say(message, balloon_type = <span class="s">&quot;say&quot;</span>)</span>
+    say</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#think%28message%29-instance-method" class="tooltip">
+      <span>think(message)</span>
+    think</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#tongue%3AString-instance-method" class="tooltip">
+      <span>tongue : String</span>
+    tongue</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#tongue%3D%28tongue%3AString%29-instance-method" class="tooltip">
+      <span>tongue=(tongue : String)</span>
+    tongue=</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#wrapcolumn%3AInt32-instance-method" class="tooltip">
+      <span>wrapcolumn : Int32</span>
+    wrapcolumn</a>, 
+    
+  
+    <a href="../Cowsay/AbstractCow.html#wrapcolumn%3D%28wrapcolumn%3AInt32%29-instance-method" class="tooltip">
+      <span>wrapcolumn=(wrapcolumn : Int32)</span>
+    wrapcolumn=</a>
+    
+  
+
+
+      
+
+  <h3>Constructor methods inherited from class <code><a href="../Cowsay/AbstractCow.html">Cowsay::AbstractCow</a></code></h3>
+  
+  
+    <a href="../Cowsay/AbstractCow.html#new%28mode%3AString%3D%22default%22%2Ceyes%3Dnil%2Ctongue%3Dnil%2Cwrapcolumn%3AInt32%3D40%2Ccolor%3ABool%3Dfalse%29-class-method" class="tooltip">
+      <span>new(mode : String = <span class="s">&quot;default&quot;</span>, eyes = <span class="n">nil</span>, tongue = <span class="n">nil</span>, wrapcolumn : Int32 = <span class="n">40</span>, color : Bool = <span class="n">false</span>)</span>
+    new</a>
+    
+  
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="render_cow-instance-method">
+      <div class="signature">
+        
+        def <strong>render_cow</strong>
+
+        <a class="method-permalink" href="#render_cow-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/satanic.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

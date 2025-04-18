@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cowsay">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="cowsay">
+  <title>Cowsay - cowsay main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          cowsay
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="cowsay/Action" data-name="action">
+      <a href="Action.html">Action</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="cowsay/Cowsay" data-name="cowsay">
+      <a href="Cowsay.html">Cowsay</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cowsay/Cowsay/AbstractCow" data-name="cowsay::abstractcow">
+      <a href="Cowsay/AbstractCow.html">AbstractCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/BeavisZen" data-name="cowsay::beaviszen">
+      <a href="Cowsay/BeavisZen.html">BeavisZen</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Bong" data-name="cowsay::bong">
+      <a href="Cowsay/Bong.html">Bong</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/BudFrogs" data-name="cowsay::budfrogs">
+      <a href="Cowsay/BudFrogs.html">BudFrogs</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Bunny" data-name="cowsay::bunny">
+      <a href="Cowsay/Bunny.html">Bunny</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Capybara" data-name="cowsay::capybara">
+      <a href="Cowsay/Capybara.html">Capybara</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cheese" data-name="cowsay::cheese">
+      <a href="Cowsay/Cheese.html">Cheese</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cow" data-name="cowsay::cow">
+      <a href="Cowsay/Cow.html">Cow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cower" data-name="cowsay::cower">
+      <a href="Cowsay/Cower.html">Cower</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Daemon" data-name="cowsay::daemon">
+      <a href="Cowsay/Daemon.html">Daemon</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Dragon" data-name="cowsay::dragon">
+      <a href="Cowsay/Dragon.html">Dragon</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/DragonAndCow" data-name="cowsay::dragonandcow">
+      <a href="Cowsay/DragonAndCow.html">DragonAndCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Elephant" data-name="cowsay::elephant">
+      <a href="Cowsay/Elephant.html">Elephant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/ElephantInSnake" data-name="cowsay::elephantinsnake">
+      <a href="Cowsay/ElephantInSnake.html">ElephantInSnake</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Eyes" data-name="cowsay::eyes">
+      <a href="Cowsay/Eyes.html">Eyes</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/FlamingSheep" data-name="cowsay::flamingsheep">
+      <a href="Cowsay/FlamingSheep.html">FlamingSheep</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Ghostbusters" data-name="cowsay::ghostbusters">
+      <a href="Cowsay/Ghostbusters.html">Ghostbusters</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/HeadIn" data-name="cowsay::headin">
+      <a href="Cowsay/HeadIn.html">HeadIn</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Hellokitty" data-name="cowsay::hellokitty">
+      <a href="Cowsay/Hellokitty.html">Hellokitty</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kiss" data-name="cowsay::kiss">
+      <a href="Cowsay/Kiss.html">Kiss</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kitty" data-name="cowsay::kitty">
+      <a href="Cowsay/Kitty.html">Kitty</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Koala" data-name="cowsay::koala">
+      <a href="Cowsay/Koala.html">Koala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kosh" data-name="cowsay::kosh">
+      <a href="Cowsay/Kosh.html">Kosh</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/LukeKoala" data-name="cowsay::lukekoala">
+      <a href="Cowsay/LukeKoala.html">LukeKoala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/MechAndCow" data-name="cowsay::mechandcow">
+      <a href="Cowsay/MechAndCow.html">MechAndCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Meow" data-name="cowsay::meow">
+      <a href="Cowsay/Meow.html">Meow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Milk" data-name="cowsay::milk">
+      <a href="Cowsay/Milk.html">Milk</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Moofasa" data-name="cowsay::moofasa">
+      <a href="Cowsay/Moofasa.html">Moofasa</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Moose" data-name="cowsay::moose">
+      <a href="Cowsay/Moose.html">Moose</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Mutilated" data-name="cowsay::mutilated">
+      <a href="Cowsay/Mutilated.html">Mutilated</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Owl" data-name="cowsay::owl">
+      <a href="Cowsay/Owl.html">Owl</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Ren" data-name="cowsay::ren">
+      <a href="Cowsay/Ren.html">Ren</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Satanic" data-name="cowsay::satanic">
+      <a href="Cowsay/Satanic.html">Satanic</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Sheep" data-name="cowsay::sheep">
+      <a href="Cowsay/Sheep.html">Sheep</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Skeleton" data-name="cowsay::skeleton">
+      <a href="Cowsay/Skeleton.html">Skeleton</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Small" data-name="cowsay::small">
+      <a href="Cowsay/Small.html">Small</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Sodomized" data-name="cowsay::sodomized">
+      <a href="Cowsay/Sodomized.html">Sodomized</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Stegosaurus" data-name="cowsay::stegosaurus">
+      <a href="Cowsay/Stegosaurus.html">Stegosaurus</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Stimpy" data-name="cowsay::stimpy">
+      <a href="Cowsay/Stimpy.html">Stimpy</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Supermilker" data-name="cowsay::supermilker">
+      <a href="Cowsay/Supermilker.html">Supermilker</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Surgery" data-name="cowsay::surgery">
+      <a href="Cowsay/Surgery.html">Surgery</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Tanuki" data-name="cowsay::tanuki">
+      <a href="Cowsay/Tanuki.html">Tanuki</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Telebears" data-name="cowsay::telebears">
+      <a href="Cowsay/Telebears.html">Telebears</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/ThreeEyes" data-name="cowsay::threeeyes">
+      <a href="Cowsay/ThreeEyes.html">ThreeEyes</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Turkey" data-name="cowsay::turkey">
+      <a href="Cowsay/Turkey.html">Turkey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Turtle" data-name="cowsay::turtle">
+      <a href="Cowsay/Turtle.html">Turtle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Tux" data-name="cowsay::tux">
+      <a href="Cowsay/Tux.html">Tux</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Udder" data-name="cowsay::udder">
+      <a href="Cowsay/Udder.html">Udder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/UnknownCharacterError" data-name="cowsay::unknowncharactererror">
+      <a href="Cowsay/UnknownCharacterError.html">UnknownCharacterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Vader" data-name="cowsay::vader">
+      <a href="Cowsay/Vader.html">Vader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/VaderKoala" data-name="cowsay::vaderkoala">
+      <a href="Cowsay/VaderKoala.html">VaderKoala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Www" data-name="cowsay::www">
+      <a href="Cowsay/Www.html">Www</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> Cowsay
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay.cr#L5" target="_blank">
+        cowsay.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/abstract_cow.cr#L3" target="_blank">
+        cowsay/abstract_cow.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/beavis.zen.cr#L3" target="_blank">
+        cowsay/cows/beavis.zen.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/bong.cr#L3" target="_blank">
+        cowsay/cows/bong.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/bud-frogs.cr#L3" target="_blank">
+        cowsay/cows/bud-frogs.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/bunny.cr#L3" target="_blank">
+        cowsay/cows/bunny.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/capybara.cr#L3" target="_blank">
+        cowsay/cows/capybara.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/cheese.cr#L3" target="_blank">
+        cowsay/cows/cheese.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/cow.cr#L3" target="_blank">
+        cowsay/cows/cow.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/cower.cr#L3" target="_blank">
+        cowsay/cows/cower.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/daemon.cr#L3" target="_blank">
+        cowsay/cows/daemon.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/dragon-and-cow.cr#L3" target="_blank">
+        cowsay/cows/dragon-and-cow.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/dragon.cr#L3" target="_blank">
+        cowsay/cows/dragon.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/elephant-in-snake.cr#L3" target="_blank">
+        cowsay/cows/elephant-in-snake.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/elephant.cr#L3" target="_blank">
+        cowsay/cows/elephant.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/eyes.cr#L3" target="_blank">
+        cowsay/cows/eyes.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/flaming-sheep.cr#L3" target="_blank">
+        cowsay/cows/flaming-sheep.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/ghostbusters.cr#L3" target="_blank">
+        cowsay/cows/ghostbusters.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/head-in.cr#L3" target="_blank">
+        cowsay/cows/head-in.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/hellokitty.cr#L3" target="_blank">
+        cowsay/cows/hellokitty.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/kiss.cr#L3" target="_blank">
+        cowsay/cows/kiss.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/kitty.cr#L3" target="_blank">
+        cowsay/cows/kitty.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/koala.cr#L3" target="_blank">
+        cowsay/cows/koala.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/kosh.cr#L3" target="_blank">
+        cowsay/cows/kosh.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/luke-koala.cr#L3" target="_blank">
+        cowsay/cows/luke-koala.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/mech-and-cow.cr#L3" target="_blank">
+        cowsay/cows/mech-and-cow.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/meow.cr#L3" target="_blank">
+        cowsay/cows/meow.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/milk.cr#L3" target="_blank">
+        cowsay/cows/milk.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/moofasa.cr#L3" target="_blank">
+        cowsay/cows/moofasa.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/moose.cr#L3" target="_blank">
+        cowsay/cows/moose.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/mutilated.cr#L3" target="_blank">
+        cowsay/cows/mutilated.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/owl.cr#L3" target="_blank">
+        cowsay/cows/owl.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/ren.cr#L3" target="_blank">
+        cowsay/cows/ren.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/satanic.cr#L3" target="_blank">
+        cowsay/cows/satanic.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/sheep.cr#L3" target="_blank">
+        cowsay/cows/sheep.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/skeleton.cr#L3" target="_blank">
+        cowsay/cows/skeleton.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/small.cr#L3" target="_blank">
+        cowsay/cows/small.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/sodomized.cr#L3" target="_blank">
+        cowsay/cows/sodomized.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/stegosaurus.cr#L3" target="_blank">
+        cowsay/cows/stegosaurus.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/stimpy.cr#L3" target="_blank">
+        cowsay/cows/stimpy.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/supermilker.cr#L3" target="_blank">
+        cowsay/cows/supermilker.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/surgery.cr#L3" target="_blank">
+        cowsay/cows/surgery.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/tanuki.cr#L3" target="_blank">
+        cowsay/cows/tanuki.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/telebears.cr#L3" target="_blank">
+        cowsay/cows/telebears.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/three-eyes.cr#L3" target="_blank">
+        cowsay/cows/three-eyes.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/turkey.cr#L3" target="_blank">
+        cowsay/cows/turkey.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/turtle.cr#L3" target="_blank">
+        cowsay/cows/turtle.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/tux.cr#L3" target="_blank">
+        cowsay/cows/tux.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/udder.cr#L3" target="_blank">
+        cowsay/cows/udder.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/vader-koala.cr#L3" target="_blank">
+        cowsay/cows/vader-koala.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/vader.cr#L3" target="_blank">
+        cowsay/cows/vader.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/cows/www.cr#L3" target="_blank">
+        cowsay/cows/www.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay/version.cr#L1" target="_blank">
+        cowsay/version.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="SOURCE">
+        <strong>SOURCE</strong> = <code><span class="s">&quot;https://github.com/kojix2/cowsay.cr&quot;</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="o">{{</span> (<span class="s">`shards version /home/runner/work/cowsay.cr/cowsay.cr/src/cowsay`</span>).chomp.stringify }}</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%28character%29%3AClass-class-method" class="signature"><strong>.[]</strong>(character) : Class</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#character_names-class-method" class="signature"><strong>.character_names</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#say%28message%2Ccharacter%3D%22cow%22%2Cmode%3D%22default%22%2Ceyes%3Dnil%2Ctongue%3Dnil%2Cwrapcolumn%3D40%2Ccolor%3Dfalse%29-class-method" class="signature"><strong>.say</strong>(message, character = <span class="s">&quot;cow&quot;</span>, mode = <span class="s">&quot;default&quot;</span>, eyes = <span class="n">nil</span>, tongue = <span class="n">nil</span>, wrapcolumn = <span class="n">40</span>, color = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Creates a speech bubble with the given message and renders it with the specified character.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#think%28message%2Ccharacter%3D%22cow%22%2Cmode%3D%22default%22%2Ceyes%3Dnil%2Ctongue%3Dnil%2Cwrapcolumn%3D40%2Ccolor%3Dfalse%29-class-method" class="signature"><strong>.think</strong>(message, character = <span class="s">&quot;cow&quot;</span>, mode = <span class="s">&quot;default&quot;</span>, eyes = <span class="n">nil</span>, tongue = <span class="n">nil</span>, wrapcolumn = <span class="n">40</span>, color = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Creates a thought bubble with the given message and renders it with the specified character.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="[](character):Class-class-method">
+      <div class="signature">
+        
+        def self.<strong>[]</strong>(character) : Class
+
+        <a class="method-permalink" href="#%5B%5D%28character%29%3AClass-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="character_names-class-method">
+      <div class="signature">
+        
+        def self.<strong>character_names</strong>
+
+        <a class="method-permalink" href="#character_names-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay.cr#L118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="say(message,character=&quot;cow&quot;,mode=&quot;default&quot;,eyes=nil,tongue=nil,wrapcolumn=40,color=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>say</strong>(message, character = <span class="s">&quot;cow&quot;</span>, mode = <span class="s">&quot;default&quot;</span>, eyes = <span class="n">nil</span>, tongue = <span class="n">nil</span>, wrapcolumn = <span class="n">40</span>, color = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#say%28message%2Ccharacter%3D%22cow%22%2Cmode%3D%22default%22%2Ceyes%3Dnil%2Ctongue%3Dnil%2Cwrapcolumn%3D40%2Ccolor%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a speech bubble with the given message and renders it with the specified character.</p>
+<h2><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h2>
+<ul>
+<li>message : The message to display in the speech bubble</li>
+<li>character : The character to use (default: &quot;cow&quot;)</li>
+<li>mode : The face mode to use (default: &quot;default&quot;)</li>
+<li>eyes : Custom eyes to use (overrides mode)</li>
+<li>tongue : Custom tongue to use (overrides mode)</li>
+<li>wrapcolumn : Column width for text wrapping (default: 40)</li>
+<li>color : Whether to enable colored output (default: false)</li>
+</ul>
+<h2><a id="example" class="anchor" href="#example">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Example</h2>
+<pre><code class="language-crystal">puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Hello, World!&quot;</span>)
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Hello, Tux!&quot;</span>, character: <span class="s">&quot;tux&quot;</span>, mode: <span class="s">&quot;borg&quot;</span>)
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Colorful!&quot;</span>, color: <span class="n">true</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="think(message,character=&quot;cow&quot;,mode=&quot;default&quot;,eyes=nil,tongue=nil,wrapcolumn=40,color=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>think</strong>(message, character = <span class="s">&quot;cow&quot;</span>, mode = <span class="s">&quot;default&quot;</span>, eyes = <span class="n">nil</span>, tongue = <span class="n">nil</span>, wrapcolumn = <span class="n">40</span>, color = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#think%28message%2Ccharacter%3D%22cow%22%2Cmode%3D%22default%22%2Ceyes%3Dnil%2Ctongue%3Dnil%2Cwrapcolumn%3D40%2Ccolor%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a thought bubble with the given message and renders it with the specified character.</p>
+<h2><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h2>
+<ul>
+<li>message : The message to display in the thought bubble</li>
+<li>character : The character to use (default: &quot;cow&quot;)</li>
+<li>mode : The face mode to use (default: &quot;default&quot;)</li>
+<li>eyes : Custom eyes to use (overrides mode)</li>
+<li>tongue : Custom tongue to use (overrides mode)</li>
+<li>wrapcolumn : Column width for text wrapping (default: 40)</li>
+<li>color : Whether to enable colored output (default: false)</li>
+</ul>
+<h2><a id="example" class="anchor" href="#example">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Example</h2>
+<pre><code class="language-crystal">puts <span class="t">Cowsay</span>.think(<span class="s">&quot;I wonder...&quot;</span>)
+puts <span class="t">Cowsay</span>.think(<span class="s">&quot;Hmm...&quot;</span>, character: <span class="s">&quot;tux&quot;</span>, mode: <span class="s">&quot;paranoid&quot;</span>)
+puts <span class="t">Cowsay</span>.think(<span class="s">&quot;Colorful thoughts!&quot;</span>, color: <span class="n">true</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/cowsay.cr/blob/c2b3263d1f2a0260e9701c42097512ed82b2183d/src/cowsay.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+
+</div>
+
+</body>
+</html>

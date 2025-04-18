@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cowsay">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="cowsay">
+  <title>cowsay main</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          cowsay
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="cowsay/Action" data-name="action">
+      <a href="Action.html">Action</a>
+      
+    </li>
+  
+  <li class="parent " data-id="cowsay/Cowsay" data-name="cowsay">
+      <a href="Cowsay.html">Cowsay</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cowsay/Cowsay/AbstractCow" data-name="cowsay::abstractcow">
+      <a href="Cowsay/AbstractCow.html">AbstractCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/BeavisZen" data-name="cowsay::beaviszen">
+      <a href="Cowsay/BeavisZen.html">BeavisZen</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Bong" data-name="cowsay::bong">
+      <a href="Cowsay/Bong.html">Bong</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/BudFrogs" data-name="cowsay::budfrogs">
+      <a href="Cowsay/BudFrogs.html">BudFrogs</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Bunny" data-name="cowsay::bunny">
+      <a href="Cowsay/Bunny.html">Bunny</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Capybara" data-name="cowsay::capybara">
+      <a href="Cowsay/Capybara.html">Capybara</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cheese" data-name="cowsay::cheese">
+      <a href="Cowsay/Cheese.html">Cheese</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cow" data-name="cowsay::cow">
+      <a href="Cowsay/Cow.html">Cow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Cower" data-name="cowsay::cower">
+      <a href="Cowsay/Cower.html">Cower</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Daemon" data-name="cowsay::daemon">
+      <a href="Cowsay/Daemon.html">Daemon</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Dragon" data-name="cowsay::dragon">
+      <a href="Cowsay/Dragon.html">Dragon</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/DragonAndCow" data-name="cowsay::dragonandcow">
+      <a href="Cowsay/DragonAndCow.html">DragonAndCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Elephant" data-name="cowsay::elephant">
+      <a href="Cowsay/Elephant.html">Elephant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/ElephantInSnake" data-name="cowsay::elephantinsnake">
+      <a href="Cowsay/ElephantInSnake.html">ElephantInSnake</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Eyes" data-name="cowsay::eyes">
+      <a href="Cowsay/Eyes.html">Eyes</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/FlamingSheep" data-name="cowsay::flamingsheep">
+      <a href="Cowsay/FlamingSheep.html">FlamingSheep</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Ghostbusters" data-name="cowsay::ghostbusters">
+      <a href="Cowsay/Ghostbusters.html">Ghostbusters</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/HeadIn" data-name="cowsay::headin">
+      <a href="Cowsay/HeadIn.html">HeadIn</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Hellokitty" data-name="cowsay::hellokitty">
+      <a href="Cowsay/Hellokitty.html">Hellokitty</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kiss" data-name="cowsay::kiss">
+      <a href="Cowsay/Kiss.html">Kiss</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kitty" data-name="cowsay::kitty">
+      <a href="Cowsay/Kitty.html">Kitty</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Koala" data-name="cowsay::koala">
+      <a href="Cowsay/Koala.html">Koala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Kosh" data-name="cowsay::kosh">
+      <a href="Cowsay/Kosh.html">Kosh</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/LukeKoala" data-name="cowsay::lukekoala">
+      <a href="Cowsay/LukeKoala.html">LukeKoala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/MechAndCow" data-name="cowsay::mechandcow">
+      <a href="Cowsay/MechAndCow.html">MechAndCow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Meow" data-name="cowsay::meow">
+      <a href="Cowsay/Meow.html">Meow</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Milk" data-name="cowsay::milk">
+      <a href="Cowsay/Milk.html">Milk</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Moofasa" data-name="cowsay::moofasa">
+      <a href="Cowsay/Moofasa.html">Moofasa</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Moose" data-name="cowsay::moose">
+      <a href="Cowsay/Moose.html">Moose</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Mutilated" data-name="cowsay::mutilated">
+      <a href="Cowsay/Mutilated.html">Mutilated</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Owl" data-name="cowsay::owl">
+      <a href="Cowsay/Owl.html">Owl</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Ren" data-name="cowsay::ren">
+      <a href="Cowsay/Ren.html">Ren</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Satanic" data-name="cowsay::satanic">
+      <a href="Cowsay/Satanic.html">Satanic</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Sheep" data-name="cowsay::sheep">
+      <a href="Cowsay/Sheep.html">Sheep</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Skeleton" data-name="cowsay::skeleton">
+      <a href="Cowsay/Skeleton.html">Skeleton</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Small" data-name="cowsay::small">
+      <a href="Cowsay/Small.html">Small</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Sodomized" data-name="cowsay::sodomized">
+      <a href="Cowsay/Sodomized.html">Sodomized</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Stegosaurus" data-name="cowsay::stegosaurus">
+      <a href="Cowsay/Stegosaurus.html">Stegosaurus</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Stimpy" data-name="cowsay::stimpy">
+      <a href="Cowsay/Stimpy.html">Stimpy</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Supermilker" data-name="cowsay::supermilker">
+      <a href="Cowsay/Supermilker.html">Supermilker</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Surgery" data-name="cowsay::surgery">
+      <a href="Cowsay/Surgery.html">Surgery</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Tanuki" data-name="cowsay::tanuki">
+      <a href="Cowsay/Tanuki.html">Tanuki</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Telebears" data-name="cowsay::telebears">
+      <a href="Cowsay/Telebears.html">Telebears</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/ThreeEyes" data-name="cowsay::threeeyes">
+      <a href="Cowsay/ThreeEyes.html">ThreeEyes</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Turkey" data-name="cowsay::turkey">
+      <a href="Cowsay/Turkey.html">Turkey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Turtle" data-name="cowsay::turtle">
+      <a href="Cowsay/Turtle.html">Turtle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Tux" data-name="cowsay::tux">
+      <a href="Cowsay/Tux.html">Tux</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Udder" data-name="cowsay::udder">
+      <a href="Cowsay/Udder.html">Udder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/UnknownCharacterError" data-name="cowsay::unknowncharactererror">
+      <a href="Cowsay/UnknownCharacterError.html">UnknownCharacterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Vader" data-name="cowsay::vader">
+      <a href="Cowsay/Vader.html">Vader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/VaderKoala" data-name="cowsay::vaderkoala">
+      <a href="Cowsay/VaderKoala.html">VaderKoala</a>
+      
+    </li>
+  
+  <li class=" " data-id="cowsay/Cowsay/Www" data-name="cowsay::www">
+      <a href="Cowsay/Www.html">Www</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1><a id="cowsay-in-crystal" class="anchor" href="#cowsay-in-crystal">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Cowsay (In Crystal)</h1>
+<p><a href="https://github.com/kojix2/cowsay.cr/actions/workflows/build.yml"><img src="https://github.com/kojix2/cowsay.cr/actions/workflows/build.yml/badge.svg" alt="build" /></a></p>
+<pre><code class="language-crystal"> ___________
+&lt; OMGHI2U!! &gt;
+ -----------
+      \   ^__^
+       \  (oo)\_______
+          (__)\       )\/\
+              ||----w |
+              ||     ||</code></pre>
+<p>A Crystal implementation of the classic cowsay program, which generates ASCII art of a cow with a message.</p>
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
+<h3><a id="from-binary" class="anchor" href="#from-binary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>From Binary</h3>
+<p>Download the latest binary from the <a href="https://github.com/kojix2/cowsay.cr/releases">Releases</a> page.</p>
+<h3><a id="from-source" class="anchor" href="#from-source">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>From Source</h3>
+<pre><code class="language-bash">git clone https://github.com/kojix2/cowsay.cr
+cd cowsay.cr
+shards build --release</code></pre>
+<p>The compiled binary will be available at <code>bin/cowsay</code>.</p>
+<h2><a id="usage" class="anchor" href="#usage">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Usage</h2>
+<h3><a id="as-a-command-line-tool" class="anchor" href="#as-a-command-line-tool">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>As a Command Line Tool</h3>
+<p>Basic usage:</p>
+<pre><code class="language-bash">bin/cowsay &quot;Hello, World!&quot;</code></pre>
+<p>Output:</p>
+<pre><code class="language-crystal"> _____________
+&lt; Hello, World! &gt;
+ -------------
+      \   ^__^
+       \  (oo)\_______
+          (__)\       )\/\
+              ||----w |
+              ||     ||</code></pre>
+<p>Using a different character:</p>
+<pre><code class="language-bash">bin/cowsay -c tux &quot;Hello, Linux!&quot;</code></pre>
+<p>Making the character think:</p>
+<pre><code class="language-bash">bin/cowsay -n &quot;I am thinking...&quot;</code></pre>
+<p>Using different modes:</p>
+<pre><code class="language-bash">bin/cowsay -b &quot;Borg mode&quot;  # Borg mode
+bin/cowsay -d &quot;Dead mode&quot;  # Dead mode
+bin/cowsay -s &quot;Stoned mode&quot;  # Stoned mode</code></pre>
+<p>Custom eyes and tongue:</p>
+<pre><code class="language-bash">bin/cowsay -e ^^ -T ~~ &quot;Custom face&quot;</code></pre>
+<p>Colored output:</p>
+<pre><code class="language-bash">bin/cowsay -C &quot;Colorful message!&quot;</code></pre>
+<h3><a id="as-a-library" class="anchor" href="#as-a-library">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>As a Library</h3>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;cowsay&quot;</span>
+
+<span class="c"># Basic usage</span>
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Hello, World!&quot;</span>)
+
+<span class="c"># Using a different character</span>
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Hello, Linux!&quot;</span>, character: <span class="s">&quot;tux&quot;</span>)
+
+<span class="c"># Making the character think</span>
+puts <span class="t">Cowsay</span>.think(<span class="s">&quot;I am thinking...&quot;</span>)
+
+<span class="c"># Using different modes</span>
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Borg mode&quot;</span>, mode: <span class="s">&quot;borg&quot;</span>)
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Dead mode&quot;</span>, mode: <span class="s">&quot;dead&quot;</span>)
+
+<span class="c"># Custom eyes and tongue</span>
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Custom face&quot;</span>, eyes: <span class="s">&quot;^^&quot;</span>, tongue: <span class="s">&quot;~~&quot;</span>)
+
+<span class="c"># Colored output</span>
+puts <span class="t">Cowsay</span>.say(<span class="s">&quot;Colorful message!&quot;</span>, color: <span class="n">true</span>)
+
+<span class="c"># Direct class usage</span>
+cow <span class="o">=</span> <span class="t">Cowsay</span><span class="t">::</span><span class="t">Cow</span>.new(mode: <span class="s">&quot;stoned&quot;</span>, color: <span class="n">true</span>)
+puts cow.say(<span class="s">&quot;I&#39;m feeling strange...&quot;</span>)</code></pre>
+<h2><a id="command-line-options" class="anchor" href="#command-line-options">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Command Line Options</h2>
+<pre><code class="language-crystal">Usage: cowsay [options] message
+    -c, --cow CHARACTER              Selects a character
+    -n, --think                      Makes the cow think
+    -e EYES, --eyes=EYES             Sets the eyes of the cow (default &#39;oo&#39;)
+    -T TONGUE, --tongue=TONGUE       Sets the tongue of the cow (default &#39;  &#39;)
+    -b, --borg                       Borg mode
+    -d, --dead                       appear dead
+    -g, --greedy                     Greedy mode
+    -p, --paranoid                   Paranoid mode
+    -s, --stoned                     Stoned mode
+    -t, --tired                      Tired mode
+    -w, --wired                      Wired mode
+    -y, --young                      Youthful appearance
+    -l, --list                       Lists available characters
+    -W, --wrap-column WIDTH          Sets the width of the cow
+    -C, --color                      Enable colored output
+    -v, --version                    Displays version information
+    -h, --help                       Displays this help message</code></pre>
+<h2><a id="available-characters" class="anchor" href="#available-characters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Available Characters</h2>
+<p>You can list all available characters with:</p>
+<pre><code class="language-bash">bin/cowsay -l</code></pre>
+<p>Some notable characters include:</p>
+<ul>
+<li><code>cow</code>: The default cow</li>
+<li><code>tux</code>: The Linux mascot</li>
+<li><code>dragon</code>: A dragon</li>
+<li><code>sheep</code>: A sheep</li>
+<li><code>turtle</code>: A turtle</li>
+<li><code>bunny</code>: A bunny</li>
+<li><code>moose</code>: A moose</li>
+<li>And many more!</li>
+</ul>
+<h2><a id="face-modes" class="anchor" href="#face-modes">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Face Modes</h2>
+<p>The following face modes are available:</p>
+<p>| Mode      | Description                | Eyes | Tongue |
+|-----------|----------------------------|------|--------|
+| default   | Default face               | oo   |        |
+| borg      | Borg mode                  | ==   |        |
+| dead      | Dead face                  | ==   | U      |
+| greedy    | Greedy face                | $$   |        |
+| paranoid  | Paranoid face              | @@   |        |
+| stoned    | Stoned face                | **   | U      |
+| tired     | Tired face                 | --   |        |
+| wired     | Wired face                 | OO   |        |
+| young     | Young face                 | ..   |        |</p>
+<h2><a id="development-contributing" class="anchor" href="#development-contributing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Development / Contributing</h2>
+<p>This project was forked from <a href="https://github.com/PatrickTulskie/ruby_cowsay">ruby cowsay</a>.</p>
+<p>Here are some ways you can contribute:</p>
+<ul>
+<li>Fork this repository</li>
+<li>Report bugs</li>
+<li>Fix bugs and submit pull requests</li>
+<li>Write, clarify, or fix documentation</li>
+<li>Suggest or add new features</li>
+<li>Add tests</li>
+</ul>
+<h2><a id="special-thanks" class="anchor" href="#special-thanks">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Special Thanks</h2>
+<p>Special thanks to Tony Monroe for the original perl CLI implementation. You can find out more about that here:</p>
+<pre><code class="language-crystal">http<span class="n">://</span>www.nog.net<span class="o">/</span><span class="o">~</span>tony<span class="o">/</span>warez<span class="o">/</span>cowsay.shtml</code></pre>
+</div>
+</body>
+</html>
