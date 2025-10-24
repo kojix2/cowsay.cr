@@ -26,7 +26,7 @@ jobs:
         run: crystal spec
       - name: Run executable (help)
         run: bin/cowsay --help
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: cowsay-${{ matrix.os }}
           path: bin/${{ matrix.os == 'windows' && 'cowsay.exe' || 'cowsay' }}
